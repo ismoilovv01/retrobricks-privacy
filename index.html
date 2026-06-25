@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Retro Bricks</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --border: #2a2a2a;
+      --accent: #f5c842;
+      --accent-dim: #f5c84222;
+      --text: #e8e8e8;
+      --muted: #888;
+      --pixel: 4px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Pixel grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(245,200,66,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,200,66,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+    }
+
+    .eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #fff;
+    }
+
+    .title span {
+      color: var(--accent);
+    }
+
+    .meta {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Badge — the signature element */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      border-radius: 2px;
+      padding: 10px 16px;
+      margin-top: 28px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+    }
+
+    .badge::before {
+      content: '■';
+      font-size: 10px;
+      animation: blink 1.2s step-start infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 44px;
+    }
+
+    .section-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    .highlight-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 2px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+
+    ul li {
+      display: flex;
+      gap: 12px;
+      color: #ccc;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    ul li::before {
+      content: '▸';
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 44px 0;
+    }
+
+    /* Footer */
+    .footer {
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .badge::before { animation: none; }
+    }
+
+    @media (max-width: 480px) {
+      .wrap { padding: 40px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="header">
+      <p class="eyebrow">Legal · Privacy Policy</p>
+      <h1 class="title">Retro <span>Bricks</span></h1>
+      <div class="badge">This app does not collect any personal data</div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Overview</h2>
+      <p>
+        Retro Bricks is a classic brick-breaking arcade game. We take your privacy seriously —
+        which is why we built it to work entirely on your device, with no data ever leaving it.
+      </p>
+      <div class="highlight-box">
+        <p>
+          Retro Bricks does not collect, store, transmit, or share any personal information.
+          All game data stays on your device.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Data We Collect</h2>
+      <p>We collect <strong style="color:#fff">nothing</strong>. Specifically:</p>
+      <ul>
+        <li>No name, email address, or account information</li>
+        <li>No location data</li>
+        <li>No device identifiers or advertising IDs</li>
+        <li>No usage analytics or crash reports sent to our servers</li>
+        <li>No camera, microphone, or contacts access</li>
+        <li>No financial or payment information</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Local Storage</h2>
+      <p>
+        The app saves your high scores, game progress, and settings locally on your device
+        using Android's built-in storage (Room database). This data never leaves your device
+        and is never transmitted to us or any third party.
+      </p>
+      <p>
+        You can delete all locally stored data at any time by uninstalling the app or clearing
+        the app's data from your Android settings.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Internet Access</h2>
+      <p>
+        Retro Bricks does not request internet permission and does not make any network connections.
+        The app functions fully offline.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Third-Party Services</h2>
+      <p>
+        Retro Bricks does not integrate any third-party SDKs for analytics, advertising,
+        crash reporting, or social features. There are no embedded trackers of any kind.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Children's Privacy</h2>
+      <p>
+        Because we collect no data whatsoever, Retro Bricks is safe for users of all ages,
+        including children under 13. We are compliant with COPPA (Children's Online
+        Privacy Protection Act) by design — there is simply no data to collect or share.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Changes to This Policy</h2>
+      <p>
+        If we ever update this privacy policy, we will post the new version on this page
+        and update the "Last updated" date above. Any material changes would be announced
+        via a Play Store update notice.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Contact</h2>
+      <p>
+        Questions about this privacy policy? Reach out at:
+        <br />
+        <strong style="color:#fff">diyorbekismoil01@gmail.com</strong>
+      </p>
+    </section>
+
+    <footer class="footer">
+    </footer>
+
+  </div>
+</body>
+</html>
